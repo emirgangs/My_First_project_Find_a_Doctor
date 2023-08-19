@@ -1,3 +1,4 @@
+import 'package:doctor_app_example/const/texts.dart';
 import 'package:doctor_app_example/core(default)/home_screen_widgets/home_screen_appbar_widgets.dart';
 import 'package:doctor_app_example/core(default)/home_screen_widgets/home_screen_cards_title.dart';
 import 'package:doctor_app_example/core(default)/home_screen_widgets/home_screen_listBuilder.dart';
@@ -15,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final String category = 'Kategori';
   final String topDoctors = 'Öne Çıkan Doktorlar';
   @override
   Widget build(BuildContext context) {
