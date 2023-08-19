@@ -9,5 +9,6 @@ class ColorItems {
   Color standartElevatedColor = Colors.amber;
   Color CardsBackgroundColor = const Color(0xFF33373c);
   Color normalWhiteColor = Colors.white;
+  Color normalBlackColor = Colors.black;
   Color whiteColor30 = Colors.white30;
 }

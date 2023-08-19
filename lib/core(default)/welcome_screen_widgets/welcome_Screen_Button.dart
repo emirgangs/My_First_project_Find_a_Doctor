@@ -1,7 +1,9 @@
 // ignore_for_file: file_names, camel_case_types, no_leading_underscores_for_local_identifiers
 
+import 'package:doctor_app_example/const/texts.dart';
 import 'package:doctor_app_example/screens/home_screen.dart';
 import 'package:doctor_app_example/utility/color.dart';
+import 'package:doctor_app_example/utility/edgeInsets.dart';
 import 'package:flutter/material.dart';
 
 class welcomeScreenButton extends StatelessWidget {
@@ -9,17 +11,13 @@ class welcomeScreenButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String _text = 'Başla';
-    const double _height = 60;
-    const double _weight = 170;
-    const double _radius = 50;
     return SizedBox(
-      height: _height,
-      width: _weight,
+      height: MediaQuery.of(context).size.height * 0.08,
+      width: MediaQuery.of(context).size.width * 0.4,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(_radius))),
+                  borderRadius: fontSize().welcomeScreenbuttonCircular)),
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) {
@@ -28,7 +26,7 @@ class welcomeScreenButton extends StatelessWidget {
             ));
           },
           child: Text(
-            _text,
+            welcomeSbuttonText,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall

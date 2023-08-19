@@ -1,3 +1,4 @@
+import 'package:doctor_app_example/const/texts.dart';
 import 'package:doctor_app_example/core(default)/welcome_screen_widgets/container_Opacity.dart';
 import 'package:doctor_app_example/core(default)/welcome_screen_widgets/image_Welcome_Container.dart';
 import 'package:doctor_app_example/core(default)/welcome_screen_widgets/welcome_Screen_Button.dart';
@@ -9,17 +10,16 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String welcomejpg = 'assets/welcome.jpg';
-    const String welcomeText = 'Sana Yakin Bir Doktor Bul';
     return const Scaffold(
       body: Stack(
         children: [
-          imageWelcomeContainer(welcomejpg: welcomejpg),
+          imageWelcomeContainer(welcomejpg: welcomedoctorjpg),
           ContainerOpacity(),
           Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              welcomeScreenText(welcomeText: welcomeText),
-              SizedBox(height: 45),
+              welcomeScreenText(welcomeText: welcomesText),
               welcomeScreenButton()
             ],
           ),

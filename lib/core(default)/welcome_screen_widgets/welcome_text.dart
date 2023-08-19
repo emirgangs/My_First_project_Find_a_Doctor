@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types
 
+import 'package:doctor_app_example/utility/color.dart';
 import 'package:flutter/material.dart';
 
 class welcomeScreenText extends StatelessWidget {
@@ -9,19 +10,13 @@ class welcomeScreenText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: welcomeTextPadding,
-      child: Text(
-        textAlign: TextAlign.center,
-        welcomeText,
-        style: Theme.of(context)
-            .textTheme
-            .displaySmall
-            ?.copyWith(color: whiteColor),
-      ),
+    return Text(
+      textAlign: TextAlign.center,
+      welcomeText,
+      style: Theme.of(context)
+          .textTheme
+          .displaySmall
+          ?.copyWith(color: ColorItems().normalWhiteColor),
     );
   }
 }
-
-Color whiteColor = Colors.white;
-EdgeInsets welcomeTextPadding = const EdgeInsets.only(top: 500);
