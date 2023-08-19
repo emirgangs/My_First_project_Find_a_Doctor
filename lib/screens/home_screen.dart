@@ -16,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final String topDoctors = 'Öne Çıkan Doktorlar';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
