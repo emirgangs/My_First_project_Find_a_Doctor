@@ -1,16 +1,4 @@
 # doctor_app_example
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+EN: this project is my first project to transfer my knowledge after my education, in this project I wrote using the power of dart language.
+TR: Bu proje benim eğitimimden sonraki ilk temiz kodlu responsive(global ekran) kurallarına uygun olarak geliştirdiğim projem, projemde paketlerden bağımsız tamamen dart dilinin gücünü kullanarak yazmaya çalıştığım bir proje oldu (url) hariç.
+- Sevgiler
