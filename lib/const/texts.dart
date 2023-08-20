@@ -1,5 +1,12 @@
 const String welcomedoctorjpg = 'assets/welcome.jpg';
+const String avatarpng = 'assets/avatar.png';
 const String welcomesText = 'Sana Yakin Bir Doktor Bul';
 const String welcomeSbuttonText = 'Başla';
 const String category = 'Kategori';
 const String topDoctors = 'Öne Çıkan Doktorlar';
+const String homescrText = 'İstediğiniz Uzmanı Bulun';
+const String findaDoctor = 'Doktor Ara';
+const String homeStextButtonText = 'Hepsini Gör';
+const String wpButtonText = 'Sohbet et';
+const String wpThrowText = 'Sayfa Yüklenemiyor';
+const String wplinkUrl = 'https://wa.me/';

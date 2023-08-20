@@ -5,7 +5,7 @@ class LightTheme {
   ThemeData theme = ThemeData(
     scaffoldBackgroundColor: ColorItems().scaffoldBackgroundColor,
     appBarTheme: AppBarTheme(
-        backgroundColor: Colors.transparent, elevation: NumberItems()._zero),
+        backgroundColor: ColorItems().normalTransparant, elevation: _zero),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             backgroundColor: ColorItems().standartElevatedColor)),
@@ -13,6 +13,4 @@ class LightTheme {
   );
 }
 
-class NumberItems {
-  final double _zero = 0;
-}
+const double _zero = 0;

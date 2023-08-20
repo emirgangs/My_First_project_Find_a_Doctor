@@ -19,62 +19,54 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: HomeScreenAppBarMethod(),
-      body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Column(children: [
-          Expanded(
-              flex: 3,
-              child: Column(
-                children: [
-                  const homeScreenText(),
-                  mySpacedBody(),
-                  const homeScreenTextField(),
-                  //mySpacedBody(),
-                  Row(
+      body: Column(children: [
+        const Expanded(
+            flex: 3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                homeScreenText(),
+                homeScreenTextField(),
+                Row(children: [
+                  homeScreenCardsTitle(name: category),
+                ]),
+              ],
+            )),
+        Expanded(
+            flex: 6,
+            child: Column(
+              children: [
+                const Expanded(
+                  flex: 3,
+                  child: homeScreenListViewBuilder(),
+                ),
+                const Expanded(
+                    flex: 1,
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        homeScreenCardsTitle(name: category),
-                        const homeScreenTextbutton1(),
-                      ]),
-                ],
-              )),
-          Expanded(
-              flex: 6,
-              child: Column(
-                children: [
-                  const Expanded(
-                    flex: 3,
-                    child: homeScreenListViewBuilder(),
-                  ),
-                  Expanded(
-                      flex: 1,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          homeScreenCardsTitle(name: topDoctors),
-                          const homeScreenTextbutton2(),
-                        ],
-                      )),
-                  Expanded(
-                      flex: 6,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TopDoctors(
-                              doctorImage: 'assets/doctors/doctor2.jpg',
-                              doctorName: 'Prof. Kalp DR. Ali'),
-                          TopDoctors(
-                              doctorImage: 'assets/dent_doctors/dent5.jpg',
-                              doctorName: 'Prof. Diş DR. Naz')
-                        ],
-                      )),
-                ],
-              )),
-        ]),
-      ),
+                        homeScreenCardsTitle(name: topDoctors),
+                        homeScreenTextbutton2(),
+                      ],
+                    )),
+                Expanded(
+                    flex: 6,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TopDoctors(
+                            doctorImage: 'assets/doctors/doctor2.jpg',
+                            doctorName: 'Prof. Kalp DR. Ali'),
+                        TopDoctors(
+                            doctorImage: 'assets/dent_doctors/dent5.jpg',
+                            doctorName: 'Prof. Diş DR. Naz')
+                      ],
+                    )),
+              ],
+            )),
+      ]),
     );
   }
-
-  SizedBox mySpacedBody() => const SizedBox(height: 15);
 }

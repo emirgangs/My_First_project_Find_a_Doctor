@@ -2,6 +2,7 @@
 
 import 'package:doctor_app_example/product(special)/lists/category_list.dart';
 import 'package:doctor_app_example/utility/color.dart';
+import 'package:doctor_app_example/utility/edgeInsets.dart';
 import 'package:flutter/material.dart';
 
 class homeScreenListViewBuilder extends StatelessWidget {
@@ -9,18 +10,16 @@ class homeScreenListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double _containerWidth = 85;
     const double _CardElevation = 5;
-    EdgeInsetsGeometry _containerMarginValue = const EdgeInsets.only(right: 30);
-    BorderRadiusGeometry _CardRadiusCircular = BorderRadius.circular(20);
     return ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: categoryList.length,
         itemBuilder: (context, index) {
           return Container(
-              width: _containerWidth,
-              margin: _containerMarginValue,
+              width: MediaQuery.of(context).size.width * 0.23,
+              margin: fontSize().listvBcontainerMarginValue,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
                     onTap: () {
@@ -31,10 +30,9 @@ class homeScreenListViewBuilder extends StatelessWidget {
                         elevation: _CardElevation,
                         shadowColor: ColorItems().standartElevatedColor,
                         shape: RoundedRectangleBorder(
-                            borderRadius: _CardRadiusCircular),
+                            borderRadius: fontSize().listvBCardRadiusCircular),
                         child: Image.asset(categoryList[index])),
                   ),
-                  const SizedBox(height: 10),
                   Text(
                     categoryNames[index],
                     style: Theme.of(context)
@@ -52,13 +50,14 @@ class homeScreenListViewBuilder extends StatelessWidget {
     // İSTEDİĞİMİZ GİBİ BİZE BİR ŞEY DÖNDÜRÜR
 
     showModalBottomSheet(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(25))),
+      shape: RoundedRectangleBorder(
+          borderRadius:
+              BorderRadius.vertical(top: fontSize().listvbuildersheetcircular)),
       backgroundColor: ColorItems().scaffoldBackgroundColor,
       context: context,
       builder: (context) {
         return SizedBox(
-          height: 500,
+          height: MediaQuery.of(context).size.height / 0.5,
           child: selectedItem,
         );
       },

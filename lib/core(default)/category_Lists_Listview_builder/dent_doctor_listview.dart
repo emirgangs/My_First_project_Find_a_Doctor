@@ -1,3 +1,4 @@
+import 'package:doctor_app_example/core(default)/home_screen_widgets/whatsappLink_Button.dart';
 import 'package:doctor_app_example/product(special)/doctors_lists/dent_list.dart';
 import 'package:doctor_app_example/product(special)/doctors_lists/heart_doctor_list.dart';
 import 'package:doctor_app_example/utility/color.dart';
@@ -11,9 +12,9 @@ ListView dentDoctorListview() {
       return Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          const SizedBox(height: 10),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           SizedBox(
-            height: fontSize().selectedinListcardsHeight,
+            height: MediaQuery.of(context).size.height * 0.18,
             child: Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: fontSize().sandartCardsCircular),
@@ -22,7 +23,7 @@ ListView dentDoctorListview() {
                   children: [
                     Image.asset(
                       dentDoctorsImage[index],
-                      height: fontSize().cardsphotoHeight,
+                      height: MediaQuery.of(context).size.height * 0.12,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -34,10 +35,7 @@ ListView dentDoctorListview() {
                               color: ColorItems().normalWhiteColor,
                               fontSize: fontSize().standartfontSize),
                         ),
-                        Text("Whatsapp Link",
-                            style: TextStyle(
-                                color: ColorItems().whiteColor30,
-                                fontSize: fontSize().standartfontSize)),
+                        const WpLinkButton(),
                       ],
                     )
                   ],

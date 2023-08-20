@@ -11,4 +11,6 @@ class ColorItems {
   Color normalWhiteColor = Colors.white;
   Color normalBlackColor = Colors.black;
   Color whiteColor30 = Colors.white30;
+  Color normalTransparant = Colors.transparent;
+  Color normalGreen = Colors.green;
 }

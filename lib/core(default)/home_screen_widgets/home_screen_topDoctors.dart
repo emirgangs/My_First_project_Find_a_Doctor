@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable, file_names
 
+import 'package:doctor_app_example/core(default)/home_screen_widgets/whatsappLink_Button.dart';
 import 'package:doctor_app_example/utility/edgeInsets.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_app_example/utility/color.dart';
@@ -12,16 +13,16 @@ class TopDoctors extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: MediaQuery.of(context).size.height * 0.17,
       child: Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+          shape: RoundedRectangleBorder(
+              borderRadius: fontSize().sandartCardsCircular),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
                 doctorImage,
-                height: 90,
+                height: MediaQuery.of(context).size.height * 0.12,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -32,10 +33,7 @@ class TopDoctors extends StatelessWidget {
                         color: ColorItems().normalWhiteColor,
                         fontSize: fontSize().standartfontSize),
                   ),
-                  Text("Whatsapp Link",
-                      style: TextStyle(
-                          color: ColorItems().whiteColor30,
-                          fontSize: fontSize().standartfontSize)),
+                  const WpLinkButton(),
                 ],
               )
             ],
